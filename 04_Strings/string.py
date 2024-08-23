@@ -133,3 +133,88 @@ print('\n')
 challenge = 'thirty days of python'
 print(challenge.endswith('on'))  # True
 print(challenge.endswith('tion'))  # false
+print('\n')
+
+#### expantabs(): Replace ta character with  spaces, default tab size is 8. It takes tab size argument
+
+challenge = 'thirty\tdays\tof\tpython'
+print(challenge.expandtabs()) # thirty  days    of      python
+print(challenge.expandtabs(10)) #thirty    days      of        python
+print('\n')
+
+#### Find(): Return the index of first occurrence of substring
+challenge = 'thirty days of Python'
+print(challenge.find('y'))  # 5
+print(challenge.find('th')) # 0
+print(challenge.find('o'))  # 12 
+print('\n')
+
+#### format() formats string into nicer output
+first_name = 'Sharim'
+last_name  = 'Shaikh'
+country =  'India'
+sentence = ' I am {} {}. I live in {}'.format(first_name,last_name,country)
+print(sentence) # I am Sharim Shaikh. I live in India
+
+radius = 10
+pi = 3.14
+area = pi * radius ** 2
+result = 'The area of circle with {} is {}'.format(str(radius),str(area))
+print(result)  # The area of circle with 10 is 314.0
+print('\n')
+
+
+#### index() : return the index of substring
+challenge = 'thirty days of python'
+print(challenge.find('y'))  # 5
+print(challenge.find('th'))  # 0
+print('\n')
+
+
+# isalnum() : checks alphanumeric character or if space occured it give an false value
+challenge = 'thirtyDaysPython'
+print(challenge.isalnum()) # True
+
+challenge = '30DaysPython'
+print(challenge.isalnum())  #True
+
+challenge = 'thirty days of python 2019'
+print(challenge.isalnum())  #False
+
+challenge = 'thirtydays of python' 
+print(challenge.isalnum())  # False
+print('\n')
+
+#### isalpha(): checks if all character are alphabets like abcdef......
+challenge  = 'abcd'
+print(challenge.isalpha())  #True
+challenge = 'thirty days of python'
+print(challenge.isalpha())  #False
+num = '123'
+print(num.isalpha())  # False
+print('\n')
+
+### isdecimal(): check decimal character
+challenge = 'thirty days of python'
+print(challenge.find('y'))  # 5
+print(challenge.find('th'))  # 0
+print('\n')
+
+
+### isdigit() : check digit character
+challenge = 'Thirty'
+print(challenge.isdigit()) # False
+challenge = '30'
+print(challenge.isdigit()) # True
+print('\n')
+
+
+### isdecimal() : check decimal character
+
+num = '10'
+print(num.isdecimal()) # True
+num = '10.5'
+print(num.isdecimal()) # False
+
+
+
