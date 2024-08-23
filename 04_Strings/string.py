@@ -215,6 +215,80 @@ num = '10'
 print(num.isdecimal()) # True
 num = '10.5'
 print(num.isdecimal()) # False
+print('\n')
+
+#isidentifier() : check for valid identifieer means it check if a string is a valid variable name
+challenge = '30DaysOfPython'
+print(challenge.isidentifier())  #False because it starts with a number
+challenge = 'thirty_days_of_python'
+print(challenge.isidentifier()) #True
+print('\n')
 
 
+#### islower() : checks if all alphabets in a string are lowercase
+challenge = 'thirty days of python'
+print(challenge.islower())  # True
+challenge = 'Thirty days of python'
+print(challenge.islower())  # False Because T is Capital
+print('\n')
 
+
+#### isupper() : returns if all character  are upparcase characters
+challenge = 'thirty days of python'
+print(challenge.isupper()) # False
+challenge = 'PYTHON'
+print(challenge.isupper())  #True
+print('\n')
+
+
+#### isnumeric() : checks numeric characters
+num='10'
+print(num.isnumeric())  # True
+print('ten'.isnumeric()) # False
+print('\n')
+
+
+#### join() : Return a Concatenated String
+
+web_tech = ['HTML','CSS','Javascript','React']
+result = '#'.join(web_tech)
+print(result) # HTML#CSS#Javascript#React
+print('\n')
+
+
+#### strip() : Remove both leading and trailing character
+challenge = 'thirty days of Python'
+print(challenge.strip('y'))
+print('\n')
+
+#### replace () : Replace substring inside
+challenge = 'thirty days of python'
+print(challenge.replace('python', 'coding'))  # thirty days of coding
+print('\n')
+
+#### Slipt() : Splits String from left
+challenge = 'thirty days of python'
+print(challenge.split())  # ['thirty', 'days', 'of', 'python']
+print('\n')
+
+
+#### title() : Return a Title Cased String
+challenge = 'thirty days of python'
+print(challenge.title())  # Thirty Days Of Python
+print('\n')
+
+
+#### swapcase() : check if string starts with the specified String
+challenge = 'thirty days of python'
+print(challenge.swapcase()) # THIRTY DAYS OF PYTHON
+challenge = 'Thirty Days Of Python'
+print(challenge.swapcase()) #tHIRTY dAYS oF pYTHON
+print('\n')
+
+
+#### Startwith() : check if strting starts with the specified string
+
+challenge = 'thirty days of python'
+print(challenge.startswith('thirty')) # True
+challenge = '30 days of Python'
+print(challenge.startswith('thirty'))  # False
