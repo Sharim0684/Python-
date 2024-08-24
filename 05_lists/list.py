@@ -105,4 +105,103 @@ print(fruits)   # ['banana','orange', 'mango']
 
 fruits.pop(0)
 print(fruits)   # ['orange', 'mango']
+print('\n')
 
+#del 
+fruits = ['banana','orange','mango','lemon']
+del fruits[0]
+print(fruits)  # ['orange', 'mango', 'lemon']
+
+del fruits[1]
+print(fruits)   # ['orange', 'lemon']
+
+# del fruits
+# print(fruits)   # this shoud give nameError i.e name 'fruits' not defined
+print('\n')
+
+#### clear
+
+fruits=['banana','orange','mango','lemon']
+fruits.clear()
+print(fruits)   # []  --> it clear the list and show only empty list
+print('\n')
+
+#### copying a list
+
+fruits = ['banana','orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+print(fruits_copy)  # ['banana', 'orange', 'mango', 'lemon']
+print('\n')
+
+
+### join
+positive_number = [1,2,3,4,5]
+zero = [0]
+negative_number = [-5,-4,-3,-2,-1]
+integer = negative_number + zero + positive_number
+print(integer)     # [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+fruits = ['banana', 'orange', 'mango', 'lemon']
+vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+fruits_and_vegetables = fruits + vegetables
+print(fruits_and_vegetables)  # ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+print('\n')
+
+
+#### join with extend
+num1 = [0,1,2,3]
+num2 = [4,5,6]
+num1.extend(num2)
+print('Numbers:', num1)  # Numbers: [0, 1, 2, 3, 4, 5, 6]
+negative_number = [-5,-4,-3,-2,-1]
+positive_number = [1,2,3,4,5]
+zero = [0]
+
+negative_number.extend(zero)
+negative_number.extend(positive_number)
+print('Integer:',negative_number)  # [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+
+fruits = ['banana', 'orange', 'mango','lemon']
+vegetables = ['Tomato', 'Potato', 'Cabbage', ' Onion', 'Carrot']
+fruits.extend(vegetables)
+print('fruits_and_vegetables', fruits)  #fruits_and_vegetables ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', ' Onion', 'Carrot']
+print('\n')
+
+
+#### count 
+fruits = ['banana','orange','mango','lemon']
+print(fruits.count('orange'))   # 1
+ages = [22,19,24,25,26,24,25,24]
+print(ages.count(24))  # 3
+print('\n')
+
+
+#### index
+fruits = ['banana','orange','mango','lemon']
+print(fruits.index('orange'))   # 1
+ages = [22,19,24,25,26,25,24]
+print(ages.index(24))   # 2
+print('\n')
+
+
+#### Reverse
+fruits = ['banana','orange','mango','lemon']
+fruits.reverse()
+print(fruits)   # ['lemon', 'mango', 'orange', 'banana']
+ages = [22,19,24,25,26,25,24]
+ages.reverse()
+print(ages)  # [24, 25, 26, 25, 24, 19, 22]
+print('\n')
+
+
+
+#### Sort 
+fruits = ['banana','orange','mango','lemon']
+fruits.sort()
+print(fruits)  # ['banana', 'lemon', 'mango', 'orange']
+fruits.sort(reverse = True)
+print(fruits)   # ['orange', 'mango', 'lemon', 'banana']
+ages = [22,19,24,25,26,25,24]
+ages.sort()
+print(ages)   # [19, 22, 24, 24, 25, 25, 26]
+ages.sort(reverse = True)
+print(ages)   # [26, 25, 25, 24, 24, 22, 19]
